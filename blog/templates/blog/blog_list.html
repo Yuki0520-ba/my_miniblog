@@ -1,0 +1,31 @@
+{% extends "base.html"%}
+{% block body%}
+
+
+    {% if user.is_authenticated %} {#ユーザーがログインしているかどうか判定#}
+        <a href="{% url 'create' %}" class="btn btn-outline-dark btn-lg"> NEW CREATE</a>
+    {% endif %}
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+        {% for blog in blogs %}
+            <div class="post-preview">
+            <a href="{% url 'detail' blog.id %}">
+                <h2 class="post-title">
+                    {{blog.content}}
+                </h2>
+                
+            </a>
+            <p class="post-meta">{{blog.posted_date}}</p>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+
+
+{% include "paginate.html"%}
+
+
+
+{% endblock%}
+
+

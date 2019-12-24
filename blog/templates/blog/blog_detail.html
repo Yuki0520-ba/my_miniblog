@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+<div class="row">
+    {% block body%}
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-preview">
+          <!--<a href="post.html"> -->
+            <h2 class="post-title">
+              {{blog.content}}
+            </h2>
+          <!--</a>-->
+          <p class="post-meta">{{blog.posted_date}}</p>
+        </div>
+
+        {% if user.is_authenticated%} {#ユーザーがログインしているかどうか判定#}
+          <a href="{% url 'update' blog.id%}" class="btn btn-outline-dark"> 編集</a>
+          <a href="{% url 'delete' blog.id%}" class="btn btn-outline-danger"> 削除</a>
+        {% endif %}
+
+    </div>
+    {% endblock%}
+</div>
+
+
