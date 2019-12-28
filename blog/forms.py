@@ -6,8 +6,8 @@ from .models import Blog
 class BlogForm(forms.ModelForm):
 
     content=forms.CharField(widget=forms.TextInput(attrs={'size':25}))
-    content_detail=forms.CharField(widget=forms.Textarea)
-    url=forms.CharField(widget=forms.TextInput(attrs={'size':25}))
+    content_detail=forms.CharField(widget=forms.Textarea,required=False)
+    url=forms.CharField(widget=forms.TextInput(attrs={'size':25}),required=False)
     
 
     class Meta:
