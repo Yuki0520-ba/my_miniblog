@@ -6,9 +6,25 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="post-preview">
           <!--<a href="post.html"> -->
-            <h2 class="post-title">
+            <h1 class="post-title">
               {{blog.content}}
-            </h2>
+            </h1>
+            <br>
+            {% if blog.content_detail %}
+              <h4 class="post-subtitle">
+                {{blog.content_detail}}
+              </h4>
+              
+            {% endif %}
+
+            {% if blog.url %}
+              <br>
+
+              <h7 class="nav-item">
+                <a class="nav-link" href={{ blog.url }}>Link</a>
+              </h7>
+            {% endif %}
+
           <!--</a>-->
           <p class="post-meta">{{blog.posted_date}}</p>
         </div>

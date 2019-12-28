@@ -13,3 +13,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+
+
+#ローカルでの実行時=> wsgi.py の whitenoise 関連のコードをコメントアウトする
