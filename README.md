@@ -9,7 +9,7 @@ djangoのアウトプット用で作成したブログ機能を持つwebアプ�
 を登録できます。  
 ログイン、記事のCRUD機能があります。  
 また  
-uaser id  subuser  
+uaser id: subuser  
 pasward: user0000  
 で仮ユーザーとしてログインし、記事作成、編集、削除が行えるようになります。  
 
